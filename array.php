@@ -1,36 +1,54 @@
-<?php
+<div>
+    <h2>Person with only Firstname with for-loop</h2>
+    <?php
+        // declare person1 and person2 in single dimension array
+        $person1 = [
+            "Savas",
+            "Erbas",
+            "Gelistirici",
+            31
+        ];
 
-    // declare person1 and person2 in single dimension array
-    $person1 = [
-        "Savas",
-        "Erbas",
-        "Gelistirici",
-        31
-    ];
-    $person2 =[
-        'ad' => 'Savas',
-        'soyad' => 'Erbas',
-        'meslek' => 'Gelistirici',
-        'yas' => 23
-    ];
-    // loop with for-loop 
+        // loop with for-loop 
     for($i=0; $i<sizeof($person1); $i++)
     {
         echo '<li>'.$person1[$i].'</li>';  
     }
-    
+    ?>
+</div>
+<hr/>
+<div>
+<h2>Person with Firstname withou for-Loop</h2>
+<?php
+$person2 =[
+    'name' => 'Savas',
+    'surename' => 'Erbas',
+    'job' => 'Gelistirici',
+    'age' => 23
+    ];
 
-    
+    echo '<li>'.$person2['surename'].'</li>';  
+    echo '<li>'.$person2['job'].'</li>';  
+    echo '<li>'.$person2['age'].'</li>';     
+    echo '<li>'.$person2['name'].'</li>';  
 
-    $zwei_dimensional = [ 
+?>
+</div>
+<hr/>
+<div>
+<h2>Loop Multidimension Array</h2>
+<?php    
+    // mutli dimension array
+    $multi_dim_array = [ 
         'names' => ['Max','Mike','Joe'],
         'surename' => ['Musterman','Peters','Francis'],
         'ages'=>[21,34,15]
      ];
     
-     foreach($zwei_dimensional as $spalte){
-         echo '<li>'.$spalte[0].' '.$spalte[1].'</li>';
+     // loop multi dimension array
+     foreach($multi_dim_array as $block){
+         echo '<li>'.$block[0].' '.$block[1].'</li>';
      }
-
-    print_r($person2);
 ?>
+</div>
+
